@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sample JS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	</head>
+	<body>
+		<div class="left-inputs">
+		<input type="text" id="firstname" placeholder="First name" >
+		<input type="text" id="lastname" placeholder="Last name" >
+          </div>
+          <div class="right-inputs">
+          <input type="text" id="email" placeholder="Email" >
+         <input type="text" id="phonenumber" placeholder="phone number" >
+          </div>
+         <button onclick="submit()">Get Values</button>
+          <script>
+          	/*var fname = document.getElementById("firstname") ;
+          	var lname = document.getElementById("lastname");
+          	var uname = document.getElementById("email");
+          	var phone = document.getElementById("phonenumber") ;
+          	console.log(fname.value);
+          	console.log(lname.value);
+          	console.log(email.value);
+          	console.log(phone.value);*/
+          	function submit()
+          	{
+          	var fname = document.getElementById("firstname") ;
+          	var lname = document.getElementById("lastname");
+          	var e = document.getElementById("email").value;
+          	var phone = document.getElementById("phonenumber").value ;
+          	var atpos = e.indexOf("@");
+          	var dotpos = e.lastIndexOf(".");
+
+          	if(fname.value.length<3)
+          	{
+          		alert("should not be less than three characters");
+          		          	}
+          	else
+          	{
+          		console.log(fname.value);
+          	}
+          if(lname.value.length<3)
+          	{
+          		alert("last name should not be less than three characters");
+          		          	}
+          	else
+          	{
+          		console.log(lname.value);
+          	}
+          	if(atpos<1 || dotpos<atpos+2 || dotpos+2>=e.length)
+          	{
+          		alert("not a valid email id");
+          	}
+          	else
+          	{
+          	console.log(e.value);
+          }
+          	if(isNaN(phone))
+          	{
+          		alert("phone number should be numeric");
+
+          	}
+          	else
+          		{
+          		          	console.log(phone);
+          }
+}
+          	        </script>
+
+	</body>
